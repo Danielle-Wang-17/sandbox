@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cat Gallery</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KLF2RJ4');</script>
+            <!-- End Google Tag Manager -->
+        <script>
+            // Push the user id from this random list (for testing)
+            const userIdArray = ['user-1', 'user-2', 'user-3', 'user-4', 'user-5', 'user-6', 'user-7'];
+            const randInt = Math.floor(Math.random() * 8);
+            dataLayer.push({'userId': userIdArray[randInt]});
+        </script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLF2RJ4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+                <div id="main">
+            <h1>Wellcome to the Cat Gallery!</h1>
+            <img src=".\img\logo.png" width="300px">
+            <p>Select your favorite breed to learn more.</p>
+            <hr>
+            <a href="https://www.purina.com/cats/cat-breeds/american-curl"><img src="img\AmericanCurlSHA_body_6.jpg"/></a>
+            <p>American Curl Cat Breed</p>
+            <hr>
+            <a href="https://www.purina.com/breeds/bengal-cat"><img src="img\Bengal_body_6.jpg"/></a>
+            <p>Bengal Cat</p>
+            <hr>
+            <a href="https://www.purina.com/cats/cat-breeds/egyptian-mau"><img src="img\EgyptianMau_body_7.jpg"/></a>
+            <p>Egyptian Mau</p>
+            <hr>
+        </div>
+    </body>
+</html>
