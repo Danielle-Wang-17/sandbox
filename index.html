@@ -2,9 +2,18 @@
 <html>
     <head>
         <title>Cat Gallery</title>
+        <meta name="desription" content="sandbox">
         <link rel="stylesheet" href="styles.css">
         <script>
+            // Initialize data layer and push user id
             window.dataLayer = window.dataLayer || [];
+
+            // https://developers.google.com/analytics/devguides/collection/ga4/user-id?technology=gtagjs (User Id)
+
+            // Push the user id from this random list (for testing)
+            const userIdArray = ['user-1', 'user-2', 'user-3', 'user-4', 'user-5', 'user-6', 'user-7'];
+            const randInt = Math.floor(Math.random() * 8);
+            dataLayer.push({'userId': userIdArray[randInt]});
         </script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -13,12 +22,6 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-KLF2RJ4');</script>
             <!-- End Google Tag Manager -->
-        <script>
-            // Push the user id from this random list (for testing)
-            const userIdArray = ['user-1', 'user-2', 'user-3', 'user-4', 'user-5', 'user-6', 'user-7'];
-            const randInt = Math.floor(Math.random() * 8);
-            dataLayer.push({'userId': userIdArray[randInt]});
-        </script>
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
@@ -26,6 +29,7 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
                 <div id="main">
+            
             <h1>Wellcome to the Cat Gallery!</h1>
             <img src=".\img\logo.png" width="300px">
             <p>Select your favorite breed to learn more.</p>
